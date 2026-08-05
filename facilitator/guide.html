@@ -32,7 +32,15 @@
   .mins { font-family: 'Antonio', Impact, sans-serif; font-size: 11px; color: #946E24;
     letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
   .sec { border: 1px solid #E4E4E4; border-left: 3px solid #CFAE70; border-radius: 4px;
-    padding: 12px 16px; margin-bottom: 12px; break-inside: avoid; }
+    padding: 12px 16px; margin-bottom: 12px; break-inside: avoid;
+    display: grid; grid-template-columns: 290px 1fr; gap: 16px; align-items: start; }
+  .sec.noimg { grid-template-columns: 1fr; }
+  .sec.noimg .sec__shot { display: none; }
+  .sec__shot { position: sticky; top: 12px; }
+  .sec__shot img { width: 100%; border: 1px solid #E4E4E4; border-radius: 3px; display: block; }
+  .sec__notes { min-width: 0; }
+  @media (max-width: 700px) { .sec { grid-template-columns: 1fr; } .sec__shot { position: static; max-width: 340px; } }
+  @media print { .sec { grid-template-columns: 240px 1fr; } .sec__shot { position: static; } }
   .purpose { font-weight: 600; margin: 2px 0 8px; }
   .tagline { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
     letter-spacing: .08em; font-size: 10px; margin: 10px 0 2px; color: #1C1C1C;
@@ -81,6 +89,8 @@
   </div>
 
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-welcome.jpg" alt="Slide: Welcome / QR" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Welcome / QR <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Get every learner into the experience on their own device and set the contract: everyone speaks today, drafts stay private, and the work targets a real presentation.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Welcome. Point your camera at that code before we start. Two things about today. First: everyone in this room speaks out loud at least once — sixty to ninety seconds, with exactly one piece of feedback. I'm telling you now so it's not a surprise later. Second: you brought a real presentation, and by the end of this hour it will have a one-sentence Big Idea, a structure, and a written opening line. What you draft stays on your screen.&rdquo;</p>
@@ -91,8 +101,11 @@
     <p class="mini"><b>Watch for:</b> Visible dread when you announce the live round. Reframe immediately: 60 seconds, one sentence plus an opening line, one note. Reps, not performance.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Here's exactly what you'll walk out able to do.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: one scan prompt, the everyone-speaks contract, move on.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-hero.jpg" alt="Slide: Objectives" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Objectives <span class="mins">Full 2 min · Core 1</span></h2>
     <p class="purpose">Set the contract: six capabilities, ending in one real presentation rebuilt with the opening line written word for word.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six things by the end: you'll know why gravitas and communication decide how your message lands and which pillar is your growth edge. You'll compress your real presentation into one sentence. You'll structure it two ways — the Sparkline for hearts and minds, SCQA for the executive room — and know when to use each. You'll take a live, timed delivery rep. And you'll practice staying composed when the pointed question comes. It all lands in one artifact: your rebuild card, with the opening line written word for word.&rdquo;</p>
@@ -103,8 +116,11 @@
     <p class="mini"><b>Watch for:</b> The montage pulling attention; advance once the objectives have been read.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Seven ideas, in order — starting with a myth that needs to die.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: objectives 2 and 6 out loud; the rest on screen.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-agenda.jpg" alt="Slide: Agenda" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Agenda <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Show the arc once so learners can place each tool as it arrives: the case, presence, idea, structure, delivery, defense.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The arc is simple: first why this skill decides more than you think, then build — one idea, two structures — then deliver it live, then survive the questions.&rdquo;</p>
@@ -115,8 +131,11 @@
     <p class="mini"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Start with the numbers, because half of what you believe about public speaking is folklore.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: skip entirely; the deck's structure carries it.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-case.jpg" alt="Slide: 01 · The myth &amp; the case" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>01 · The myth &amp; the case <span class="mins">Full 8 min · Core 5</span></h2>
     <p class="purpose">Kill the fear myth with the Chapman data and establish the career stakes with Coqual and Deloitte — reframing presenting as a leadership skill, not a stage skill.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Everything you've heard about public speaking starts with 'it's America's number one fear.' It isn't — and it hasn't been for a while. In the 2024 Chapman Survey it ranked fifty-ninth of eighty-five, a few points below sharks. So if fear isn't what's separating forgettable presenters from the ones a room remembers, what is? That's what these four numbers are about — and I want you to guess each one before I show you.&rdquo;</p>
@@ -127,8 +146,11 @@
     <p class="mini"><b>Watch for:</b> Someone whose fear IS real and who hears the myth-busting as dismissal. Honor it in one line — 'nerves are real; the data just says they're not the main barrier, and structure is the best treatment for both' — and keep moving.</p>
     <p class="mini"><b>Transition:</b> &ldquo;One sentence before the frameworks — the session's warning label.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: Guess the Number as a fast room vote, quick check stays, discussion becomes one show of hands.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-belief.jpg" alt="Slide: Manifesto" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Manifesto <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">One beat of stillness to lock Anderson's core insight before the tooling begins.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;You can coach out a weak delivery. You can't coach in a weak idea.&rdquo;</p>
@@ -139,8 +161,11 @@
     <p class="mini"><b>Watch for:</b> The urge to talk over it. Don't.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Which is why we build the idea first and polish the delivery after. But first — the presence the idea travels on.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: skip; say the line yourself as you pass it.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-presence.jpg" alt="Slide: 02 · Executive presence" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>02 · Executive presence <span class="mins">Full 8 min · Core 4</span></h2>
     <p class="purpose">Install Hewlett's three-pillar model with its real weights, make it sight-readable in presentation moments, and get each learner a named growth edge for the capstone.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Hewlett's team asked 268 senior executives what actually signals leadership readiness. Sixty-seven percent said gravitas — confidence, decisiveness, grace under fire. Twenty-eight percent said communication. Five percent said appearance. Now the useful part: communication is how the room sees your gravitas. You can be brilliant under pressure in private and it counts for nothing in the meeting where careers are decided. That meeting is usually a presentation — which is why this is a leadership course wearing a public-speaking costume.&rdquo;</p>
@@ -151,8 +176,11 @@
     <p class="mini"><b>Watch for:</b> The model turning into a fixed-trait test ('I'm just not a gravitas person'). Keep it behavioral: gravitas is a set of trainable moves — composure under challenge, going deep without flinching — and Section 07 drills exactly that.</p>
     <p class="mini"><b>Transition:</b> &ldquo;And the idea has a brutal test: can you say it in one sentence?&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: cards with numbers in ninety seconds, trainer on devices, solo ranking in thirty silent seconds.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-bigidea.jpg" alt="Slide: 03 · The Big Idea" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>03 · The Big Idea <span class="mins">Full 12 min · Core 9</span></h2>
     <p class="purpose">Install Duarte's Big Idea discipline (point of view + stakes, one sentence) and get every learner a drafted Big Idea for their real presentation — the raw material for everything after.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Nancy Duarte studied the greatest talks ever given looking for their common architecture, and the foundation is always the same: one Big Idea. Not a topic — a point of view, plus what's at stake, in one sentence. 'Our Q3 results' commits to nothing; nobody can disagree with it, so nobody can care about it. 'We should double down on enterprise, because SMB churn just outpaced our new-logo growth' — that's a stance with a cost attached, and now the whole deck has a job: prove it. Here's the uncomfortable truth in the formula: if you can't compress your presentation into one sentence, the deck isn't unclear. The thinking is. Let's find out.&rdquo;</p>
@@ -163,8 +191,11 @@
     <p class="mini"><b>Watch for:</b> Drafts that are secretly topics ('an update on the program') or two ideas fused with 'and also.' The kind pressure-test: 'What do you want them to DO? What happens if they don't?' — the answers usually contain the real Big Idea.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the idea needs a shape. Duarte found one in the greatest speeches in history — and it isn't a straight line.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: contrast pair, trainer fast, drafter at full length (protect it), cut the video (assign as the week's watch), pressure-test one draft instead of three.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-sparkline.jpg" alt="Slide: 04 · The Sparkline" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>04 · The Sparkline <span class="mins">Full 9 min · Core 6</span></h2>
     <p class="purpose">Install Duarte's Sparkline shape (What Is ↔ What Could Be → New Bliss) as a storyboarding tool, and drill beat-recognition until learners can storyboard their own talk.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Duarte put the greatest speeches in history under a microscope and found the same shape: they alternate. Here's what is — the world as it stands, with its pain made concrete. Here's what could be. Back to what is — because the audience needs you to acknowledge the obstacle. Then a bigger what could be. And it ends on what she calls New Bliss: the picture of the world after the room says yes. The gap between reality and vision is the engine — every alternation widens it, and the audience crosses it for you. You don't build slides first. You storyboard these beats on sticky notes, and the deck comes last.&rdquo;</p>
@@ -175,8 +206,11 @@
     <p class="mini"><b>Watch for:</b> Groups skipping the return to What Is — straight-line optimism reads as salesmanship. The return to reality after each vision is what builds credibility; say it explicitly when you see it missing.</p>
     <p class="mini"><b>Transition:</b> &ldquo;…the executive room. Different audience, opposite structure.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: sketch the shape, trainer on devices, storyboard as a 3-minute solo exercise instead of groups. (Leadership-heavy Core rooms may compress this further in favor of full-depth SCQA.)</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-scqa.jpg" alt="Slide: 05 · SCQA, for the executive room" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>05 · SCQA, for the executive room <span class="mins">Full 10 min · Core 7</span></h2>
     <p class="purpose">Install Minto's SCQA with the answer-first discipline, let learners FEEL the exec room react in the graded lab, and make structure choice an audience-analysis decision.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Barbara Minto built the Pyramid Principle at McKinsey for one audience: senior people with brutal calendars. The structure is SCQA. Situation — the facts the room already accepts, and it's the shortest part; resist the history lesson. Complication — what makes right now untenable: a deadline, named stakes. Question — the exact question the room should now be asking. And the Answer — stated FIRST, specific, costed, dated. Duarte builds tension; Minto respects scarce attention. Neither is better; they're for different rooms, and choosing between them IS the audience analysis. You're about to brief a leadership room with four sentences of their attention. Build it well and watch what happens.&rdquo;</p>
@@ -187,8 +221,11 @@
     <p class="mini"><b>Watch for:</b> The over-built Situation — most presenters' instinct is to give history lessons. Minto's rule: the Situation is only what the room already agrees is true, and it's the SHORTEST part. Also watch for hearing SCQA as 'the smart one' — it's the right tool for decisions, not universally superior.</p>
     <p class="mini"><b>Transition:</b> &ldquo;The talk is built. Now the part everyone thinks the course is about: saying it out loud.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: parts with traps in two minutes, lab at full length (it IS the instruction), quick check stays, cut the conversion activity. (This section gets full depth in leadership-heavy Core rooms.)</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-delivery.jpg" alt="Slide: 06 · Delivery (live round)" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>06 · Delivery (live round) <span class="mins">Full 14 min · Core 10</span></h2>
     <p class="purpose">Install the converged delivery playbook (Anderson, Gallo, AMA) and give every participant one timed, live speaking rep with exactly one piece of framework-anchored feedback — the session's centerpiece.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Chris Anderson has coached every TED speaker of the modern era. Carmine Gallo studied hundreds of the best. The AMA has trained executive speakers for decades. Strip their advice to what converges and you get five rules: talk like a person, not an orator. Never make the room read while you talk — one idea per slide, detail in the handout. Use your voice as the highlighter: change pace, and pause before the thing that matters. Never over-apologize — no one cares about your mistake but you, until you teach them to. And rehearse out loud, timed, because reading slides silently the night before is not rehearsal. None of this needs talent. All of it needs reps — and yours is in about four minutes.&rdquo;</p>
@@ -199,8 +236,11 @@
     <p class="mini"><b>Watch for:</b> Feedback drift into pile-ons or vague praise ('that was great!'). Redirect to the frameworks: 'great pause before the ask' teaches; 'good job' doesn't. And watch the timer yourself — the round's discipline is half its value.</p>
     <p class="mini"><b>Transition:</b> &ldquo;One skill left, and it's the one that happens after your last slide: the pointed question.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: playbook in ninety seconds, trainer stays, cut the video (assign), live round at 60 seconds flat per speaker. The live round is the floor — never cut it.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-quest.jpg" alt="Slide: 07 · The tough question" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>07 · The tough question <span class="mins">Full 8 min · Core 5</span></h2>
     <p class="purpose">Install the AMA bridge (acknowledge → answer → return) and drill composure under rapid fire — the gravitas gym.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The moment presenters fear most is the pointed question from the most senior person in the room — and it's also the moment gravitas is most visible, which makes it an opportunity wearing a threat costume. The move is the bridge, three beats: acknowledge the question honestly, including whatever is true in it. Answer it directly — or commit to a date you will: 'I don't want to guess; you'll have it Thursday.' Then return to your Big Idea: 'and the reason this matters for today's decision is…' The question is not an attack. It's the room taking your idea seriously enough to test it — and every question you bridge is another rep of your Big Idea landing.&rdquo;</p>
@@ -211,8 +251,11 @@
     <p class="mini"><b>Watch for:</b> Answers that never return to the Big Idea — the most common wobble. And defensiveness dressed as confidence: 'with respect, that's unfair' is a flag, not a bridge. Model the concession move: 'what's true in that question is…'</p>
     <p class="mini"><b>Transition:</b> &ldquo;Toolkit complete. Quiz first, then the card that rebuilds your real talk.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: bridge plus trainer stay, rapid fire compresses to two volunteers, SHRM card pointed at verbally.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-recap.jpg" alt="Slide: Recap quiz" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Recap quiz <span class="mins">Full 4 min · Core 4</span></h2>
     <p class="purpose">Score the session's knowledge against the six objectives before the capstone applies it (Kirkpatrick Level 2).</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Six questions, one per big idea. This is the systems check before you rebuild the talk that leaves the room with you.&rdquo;</p>
@@ -223,8 +266,11 @@
     <p class="mini"><b>Watch for:</b> Racing. Frame it as a check before the rebuild, not a race.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Now the only part of today that changes your next presentation.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: keep at full length; this is the objectives' evidence.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-plan.jpg" alt="Slide: Capstone · The rebuild" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Capstone · The rebuild <span class="mins">Full 6 min · Core 5</span></h2>
     <p class="purpose">Convert the session into one rebuilt presentation: Big Idea, structure chosen for the room, literal opening line, one thing cut, rehearsal implied. The transfer artifact and the Level 3 seed.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Frameworks don't change presentations; rebuilt presentations do. Six decisions, and you've already drafted most of them: the talk — what, when, who. Your Big Idea, pasted from Section 03. The structure, chosen for THAT room, not your comfort. Your literal opening line — the exact first sentence, no apology, no warm-up; stakes or answer, sentence one. The thing you're cutting, because every rebuild is also a deletion. And the date. When you're done, say your structure and opening line out loud. A spoken opening line survives the walk to the podium; a silent one dies backstage.&rdquo;</p>
@@ -235,8 +281,11 @@
     <p class="mini"><b>Watch for:</b> Opening lines that are secretly apologies or agenda announcements. The test from the cheat sheet: does the first sentence deliver stakes or the answer? Also vague talks ('some upcoming meeting') — push to a named, dated presentation.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Reference shelf in one breath, and then the send-off.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: protect at full length minus the read-alouds; never cut the capstone.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-glossary.jpg" alt="Slide: Glossary" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Glossary <span class="mins">Full 1 min · Core skip</span></h2>
     <p class="purpose">Signpost the reference layer; it lives here for after the session.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;Every term from today lives here as flip cards — including MECE, for the next time a consultant uses it at you.&rdquo;</p>
@@ -247,8 +296,11 @@
     <p class="mini"><b>Watch for:</b> Don't tour all thirteen cards; one flip makes the point.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Last slide. One talk left — yours.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: skip; point at it verbally from the closing slide.</p>
+    </div>
   </div>
   <div class="sec">
+    <div class="sec__shot"><img src="img/s-close.jpg" alt="Slide: Closing · commitment" onerror="this.closest('.sec').classList.add('noimg')"></div>
+    <div class="sec__notes">
     <h2>Closing · commitment <span class="mins">Full 3 min · Core 2</span></h2>
     <p class="purpose">Convert rebuild cards into spoken commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p>
     <p class="tagline say">Say</p><p class="script">&ldquo;The whole session in one breath: the fear is folklore, presence decides more than you think, one sentence or it isn't ready, alternate reality and vision for hearts and minds, lead with the answer for the executive room, deliver like a person talking to people, and bridge every hard question back to the idea. You have a card with the opening line written. Before you go — say it. Out loud. Right now.&rdquo;</p>
@@ -259,6 +311,7 @@
     <p class="mini"><b>Watch for:</b> Cards that quietly skipped the opening line. The commitment round catches them: no line, no commitment; help them draft one on the spot from their Big Idea.</p>
     <p class="mini"><b>Transition:</b> &ldquo;Go give the talk. And when someone comments on your opening line — and someone will — write it down. That's your evidence.&rdquo;</p>
     <p class="mini core"><b>Core path:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p>
+    </div>
   </div>
   <p class="mini" style="margin-top:14px;color:#777">Generated from facilitator/notes.json. The on-screen facilitator edition lives at ./ alongside this guide.</p>
 </div>
