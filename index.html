@@ -23,7 +23,7 @@
 <link rel="preload" href="assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-<link rel="stylesheet" href="assets/css/styles.css?v=1">
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 <style>
   /* skill pills (course-level) */
   .skills { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: 1.5rem; }
@@ -61,13 +61,17 @@
   </nav>
 </header>
 
-<!-- deck dot rail + control bar -->
-<div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
-<div class="deckbar" role="group" aria-label="Presentation controls">
-  <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
-  <span class="deckbar__count" id="deckCount">1 / 15</span>
-  <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+<!-- bottom navigation bar -->
+<div class="bottombar" role="group" aria-label="Presentation controls">
+  <span class="bottombar__title" id="barTitle"></span>
+  <div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
+  <div class="bottombar__ctrl">
+    <span class="bottombar__count" id="deckCount">1 / 15</span>
+    <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
 </div>
+<button class="scrollhint" id="scrollHint" type="button" aria-label="Scroll for more on this screen">Scroll for more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
 
 <main class="deck" id="top">
 
@@ -619,11 +623,7 @@
         <a class="btn btn--ghost" href="#s-recap">Retake the quiz</a>
       </div>
     </div>
-  </section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
+  <!-- ============ FOOTER ============ -->
 <footer class="footer" aria-labelledby="footHead">
   <div class="wrap">
     <div class="footer__grid">
@@ -648,6 +648,7 @@
           <li><a href="#s-recap">Knowledge Check</a></li>
           <li><a href="#s-plan">My Rebuild</a></li>
           <li><a href="#s-close">Your Next Step</a></li>
+          <li><a href="web/">Self-paced version</a></li>
           <li><a href="https://me5231979.github.io/Course_Library/">Course Library</a></li>
           <li><a href="#top">Start Over</a></li>
         </ul>
@@ -659,8 +660,13 @@
     </div>
   </div>
 </footer>
+  </section>
+
+</main>
+
+
 
 <script src="assets/js/qrcode.js?v=1"></script>
-<script src="assets/js/main.js?v=1"></script>
+<script src="assets/js/main.js?v=11"></script>
 </body>
 </html>
