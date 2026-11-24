@@ -8,12 +8,12 @@ Practice-heavy by design: everyone drafts for a real upcoming
 presentation, and everyone speaks out loud at least once.
 
 Part of the Vanderbilt Learning Series. Catalog:
-[Course Library](https://me5231979.github.io/Course_Library/) ·
-Sister programs: [Navigating Difficult Conversations](https://me5231979.github.io/Difficult_Conversations/),
-[Emotional Intelligence](https://me5231979.github.io/Emotional-Intelligence/)
+[Course Library](https://flh-learning-library.vercel.app/) ·
+Sister programs: [Navigating Difficult Conversations](https://futureslearninghub.github.io/Difficult_Conversations/),
+[Emotional Intelligence](https://futureslearninghub.github.io/Emotional-Intelligence/)
 
-- **Learner edition:** https://me5231979.github.io/Presentation-Public-Speaking/
-- **Facilitator edition:** https://me5231979.github.io/Presentation-Public-Speaking/facilitator/
+- **Learner edition:** https://futureslearninghub.github.io/Presentation-Public-Speaking/
+- **Facilitator edition:** https://futureslearninghub.github.io/Presentation-Public-Speaking/facilitator/
 
 **Skills:** Continuously strives for excellence (VU competency) ·
 Public Speaking · Storytelling · Strategic Communication · Stakeholder

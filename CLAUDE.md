@@ -1,13 +1,13 @@
 # Presentation & Public Speaking — Vanderbilt Learning Series
 
 Single-page interactive classroom experience (Learning on Demand). Live at
-https://me5231979.github.io/Presentation-Public-Speaking/ (GitHub Pages,
+https://futureslearninghub.github.io/Presentation-Public-Speaking/ (GitHub Pages,
 `gh-pages` branch — publish with
 `git branch -f gh-pages main && git push -f origin gh-pages`).
 
 Sister programs: AI_Classroom, AI-Advanced, Difficult_Conversations,
 Coaching-for-Performance, Emotional-Intelligence; catalog at
-me5231979/Course_Library. Same engine, same standing principles.
+FuturesLearningHub/FLH-Learning-Library-. Same engine, same standing principles.
 
 ## Standing design principles (do not regress these)
 
